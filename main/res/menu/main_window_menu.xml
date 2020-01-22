@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MessagingActivity">
+
+
+    <item
+        android:id="@+id/menu_dark_mode"
+        android:title="Dark Mode"
+    />
+
+    <item
+        android:id="@+id/menu_light_mode"
+        android:title="Light Mode"
+        android:visible="false"
+        />
+
+    <item
+    android:id="@+id/menu_help"
+    android:title="Help"
+
+    />
+
+
+</menu>

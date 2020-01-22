@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"><data/>
+
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#B4EEEEEE">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/cutomactionbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/framelayout"/>
+
+   <com.lorentzos.flingswipe.SwipeFlingAdapterView
+       android:id="@+id/framelayout"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/cutomactionbar"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/absentbutton"
+       android:background="@drawable/main_frame_bg"
+       android:layout_marginStart="25dp"
+       android:layout_marginEnd="25dp"
+       android:layout_marginBottom="20dp"
+       android:layout_marginTop="15dp"
+       />
+
+        
+    
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:indeterminate="true"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+</android.support.constraint.ConstraintLayout>
+    </layout>

@@ -1,0 +1,14 @@
+Add the stated dependencies to your build.gradle file:
+
+    //dependency for swipe cards	
+    implementation 'com.lorentzos.swipecards:library:1.0.9'
+
+    //dependency for retrofit API calling
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'//this for the retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.0'// this for the JSON converter
+
+    //dependency for circular image view
+    implementation 'de.hdodenhof:circleimageview:2.2.0' //circular image dependency
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.bumptech.glide:annotations:4.9.0'
