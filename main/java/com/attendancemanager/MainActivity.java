@@ -39,16 +39,14 @@ ActivityMainBinding view;
     private ArrayList<String> bl = new ArrayList<>();
     private ArrayList<String> a2 = new ArrayList<>();
     private ArrayList<String> b2 = new ArrayList<>();
-//    private ArrayAdapter<String> studentnames;
-//    private ArrayAdapter<String> studentrollno;
     public StudentJsonAdapter studentnames;
     private int i;
     Menu menu1;
-    //dark theme D80F0F0F
+    
 
     SwipeFlingAdapterView flingContainer;
 
-    //https://attendancemanager-9c1e4.firebaseio.com/
+
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("")//url of firebase app
@@ -148,47 +146,19 @@ menu1 =menu;
     private void callApi() {
 
         view.progressbar.setVisibility(View.VISIBLE);
-//int count = 0;
-
-//put data to firebase with put function
-//while(count<8) {
-//    int count1= count;
-//    Call<Studentold> call1 = api.setDataWithoutRandomness( a2.get(count1), new Studentold(a2.get(count1), al.get(count1),""));
-//    call1.enqueue(new Callback<Studentold>() {
-//        @Override
-//        public void onResponse(Call<Studentold> call, Response<Studentold> response) {
-////                t1.setText("Success "+response.body().getName());
-////            bl.add(al.get(count1));
-////            b2.add(a2.get(count1));
-//            Log.e("b1 list at "+count1,""+al.get(count1));
-//            Log.e("b2 list at "+count1,""+a2.get(count1));
-//        }
-//
-//        @Override
-//        public void onFailure(Call<Studentold> call, Throwable t) {
-////                t1.setText("fail");
-//            Log.e("Failure","b1 list update failed at  "+count1);
-//        }
-//    });
-//    count++;
-//}
 
 //get data from firebase with get function
         Call<Student> call2=api.getData();
         call2.enqueue(new Callback<Student>() {
             @Override
             public void onResponse(Call<Student> call, Response<Student> response) {
-//                t1.setText("success "+response.body().getName()+" "+response.body().getAddress());
+
                  Response<Student> res = response;
                  ArrayList<Student_> info ;
 
                 Log.e("Respone from Firebase",res.toString());
                 Log.e("Respone from Firebase",res.body().toString());
-//                Log.e("Respone from Firebase",res.body().getName());
-//                Log.e("Respone from Firebase",res.body().getRollno());
-//
-//                bl.add(res.body().getName());
-//                b2.add(res.body().getRollno());
+             
                 info =(ArrayList<Student_>) res.body().getStudent();
                 for (int a =0;a<info.size();a++) {
                     bl.add(info.get(a).getName());
